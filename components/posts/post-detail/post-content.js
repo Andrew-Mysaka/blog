@@ -4,9 +4,9 @@ import ReactMarkdown from "react-markdown";
 
 const DUMMY_POST = {
     title: "Getting Started with Nextjs",
-    image: "getting-started-nextjs.png",
+    image: "getting-started-with-nextjs.png",
     date: "2022-02-10",
-    slug: "getting-started-with-nextjs4",
+    slug: "getting-started-with-nextjs",
     content: "# This is a first post"
 }
 
