@@ -3,15 +3,23 @@ import {getPostData, getPostsFiles} from "../../lib/posts-util";
 import Head from "next/head";
 
 function PostDetailPage(props) {
+    const post = props.post;
+
+    if (post) {
+        return (
+            <>
+                <Head>
+                    <title>{post.title}</title>
+                    <meta name='description' content={post.excerpt} />
+                </Head>
+                <PostContent post={post}/>
+            </>
+        );
+    }
+
     return (
-        <>
-            <Head>
-                <title>{props?.post?.title ?? ""}</title>
-                <meta name='description' content={props?.post?.excerpt ?? ""} />
-            </Head>
-            <PostContent post={props.post}/>
-        </>
-    );
+        <p></p>
+    )
 }
 
 export function getStaticProps(context) {
